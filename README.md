@@ -14,7 +14,7 @@ We propose **Niche Explorer**, a web-based platform designed specifically to unc
 ## 4. Core Functions
 1. **Track & Count**: Scrape new posts/titles daily; store in a searchable database.  
 2. **Keyword Growth**: Calculate frequency deltas; flag keywords whose growth exceeds set thresholds.  
-3. **Quick Summaries**: Generate 1‑2 sentence explanations for each flagged keyword using an NLP model.  
+3. **Quick Summaries**: Generate 1–2 sentence explanations for each flagged keyword and summaries of relevant posts using an NLP model.
 4. **Topic Charts**: Render line charts and growth tables with filters for time range, source, and category.
 
 ## 5. Proposed Microservices
