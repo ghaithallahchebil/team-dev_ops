@@ -54,4 +54,5 @@ Include three UML diagrams (Analysis object model, Use cases, and Top-level arch
 - A simple analysis object model in the form of a UML class diagram
 - A use case diagram
 - A UML component diagram to visualize the architecture (this can be understood as the "top-level architecture diagram")
-
+![image](https://github.com/AET-DevOps25/team-dev_ops/tree/main/docs/assets/Architecture.svg)
+(https://apollon.ase.in.tum.de/97xo5SdStOTc47IKhkKE?view=COLLABORATE)
