@@ -1,6 +1,6 @@
 # 📝 System Overview —> Architecture
 
-Since Researchers, Founders and Product Managers all share the core need to discover, evaluate and act on emerging trends, we decided to consolidate them into a single “Innovator” persona based on their shared goal of identifying trends, understanding why they matter and rapidly turning those insights into research directions or product opportunities.
+Since Researchers, Founders and Product Managers all share the core need to discover, evaluate and act on emerging trends, we decided to consolidate them into a single "Innovator" persona based on their shared goal of identifying trends, understanding why they matter and rapidly turning those insights into research directions or product opportunities.
 
 ![image](https://hackmd.io/_uploads/H1nPN87Wxg.png)
 
@@ -43,16 +43,10 @@ Prepare a simple backlog in a Markdown table or GitHub Project. Each item should
 - **GenAI Service:** Python, LangChain microservice
 - **Database:** (e.g., PostgreSQL, MongoDB)
 
-
-
-
-
-
-
 Include three UML diagrams (Analysis object model, Use cases, and Top-level architecture):
 
 - A simple analysis object model in the form of a UML class diagram
 - A use case diagram
 - A UML component diagram to visualize the architecture (this can be understood as the "top-level architecture diagram")
-![image](https://github.com/AET-DevOps25/team-dev_ops/tree/main/docs/assets/Architecture.png)
+![image](https://github.com/AET-DevOps25/team-dev_ops/blob/main/docs/Product%20backlog%20%26%20architecture/assets/Architecture.png)
 (https://apollon.ase.in.tum.de/97xo5SdStOTc47IKhkKE?view=COLLABORATE)
