@@ -47,9 +47,9 @@ Include three UML diagrams (Analysis object model, Use cases, and Top-level arch
 
 - A simple analysis object model in the form of a UML class diagram
 ![image](https://github.com/AET-DevOps25/team-dev_ops/blob/main/docs/Product%20backlog%20%26%20architecture/assets/Class_Diagram.png)
-(https://apollon.ase.in.tum.de/wVFSSFXG3sAPaELzKzQv?view=COLLABORATE)
 
 - A use case diagram
+![image](https://github.com/AET-DevOps25/team-dev_ops/blob/main/docs/Product%20backlog%20%26%20architecture/assets/use-case.png)
+
 - A UML component diagram to visualize the architecture (this can be understood as the "top-level architecture diagram")
 ![image](https://github.com/AET-DevOps25/team-dev_ops/blob/main/docs/Product%20backlog%20%26%20architecture/assets/Architecture.png)
-(https://apollon.ase.in.tum.de/97xo5SdStOTc47IKhkKE?view=COLLABORATE)

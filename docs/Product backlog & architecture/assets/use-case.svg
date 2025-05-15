@@ -1,0 +1,39 @@
+<svg width="831" height="551" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff"><defs><style>
+  text {
+    fill: #212529;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+  }
+
+  marker, text {
+    fill-opacity: 1;
+  }
+
+  * {
+    overflow: visible;
+  }
+</style></defs><svg x="15" y="175" width="80" height="140" class="Innovator" fill="#ffffff"><g><rect width="100%" height="100%" fill="none"></rect><g stroke="black" stroke-width="2"><circle cx="40" cy="25" r="15" stroke="black" fill="white" class="sc-iGgWBj fYmGgq"></circle><line x1="40" y1="40" x2="40" y2="80" stroke="black" class="sc-imWYAI kESMEa"></line><line x1="10" y1="50" x2="70" y2="50" stroke="black" class="sc-imWYAI kESMEa"></line><line x1="40" y1="80" x2="10" y2="110" stroke="black" class="sc-imWYAI kESMEa"></line><line x1="40" y1="80" x2="70" y2="110" stroke="black" class="sc-imWYAI kESMEa"></line></g><text x="40" y="130" dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none">Innovator</text></g></svg><svg x="225" y="15" width="590" height="520" class="Niche Explorer" fill="#ffffff"><g><rect width="100%" height="100%" stroke="black" fill="white" class="sc-fqkvVR uHYUy"></rect><text x="50%" y="16" dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none">Niche Explorer</text></g></svg><svg x="435" y="75" width="160" height="100" class="Enter Query" fill="#ffffff"><g><ellipse cx="50%" cy="50%" rx="50%" ry="50%" stroke="black" fill="white" class="sc-kAyceB ldFMTf"></ellipse><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none">Enter Query</text></g></svg><svg x="415" y="185" width="200" height="100" class="Configure Scan Filters" fill="#ffffff"><g><ellipse cx="50%" cy="50%" rx="50%" ry="50%" stroke="black" fill="white" class="sc-kAyceB ldFMTf"></ellipse><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none">Configure Scan Filters</text></g></svg><svg x="365" y="295" width="310" height="100" class="Explore Trend Summary" fill="#ffffff"><g><ellipse cx="50%" cy="50%" rx="50%" ry="50%" stroke="black" fill="white" class="sc-kAyceB ldFMTf"></ellipse><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none">Explore Trend Summary</text></g></svg><svg x="395" y="405" width="250" height="100" class="Validate with Source Snippets" fill="#ffffff"><g><ellipse cx="50%" cy="50%" rx="50%" ry="50%" stroke="black" fill="white" class="sc-kAyceB ldFMTf"></ellipse><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none">Validate with Source Snippets</text></g></svg><svg x="95" y="125" width="340" height="120" class="" fill="#ffffff"><g><path id="textpath-be3f887e-5c1e-426a-b3b8-e74c7a4fe28b" d="
+        M 0 110
+        L 340 -10
+    "></path><text dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none" dy="20px"><textPath xlink:href="#textpath-be3f887e-5c1e-426a-b3b8-e74c7a4fe28b" startOffset="50%"></textPath></text><polyline points="0 120,340 0" stroke-width="1" stroke="black" fill="none" class="sc-aXZVg eMElBf"></polyline></g></svg><svg x="95" y="235" width="320" height="10" class="" fill="#ffffff"><g><path id="textpath-763cfc2f-353e-4d5e-a19e-b8cc06fee0e7" d="
+        M 320 -10
+        L 0 0
+    "></path><text dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none" dy="20px" transform="
+            translate(160, 5)
+            rotate(180)
+            translate(-160, -5)
+          "><textPath xlink:href="#textpath-763cfc2f-353e-4d5e-a19e-b8cc06fee0e7" startOffset="50%"></textPath></text><polyline points="320 0,0 10" stroke-width="1" stroke="black" fill="none" class="sc-aXZVg eMElBf"></polyline></g></svg><svg x="95" y="245" width="270" height="100" class="" fill="#ffffff"><g><path id="textpath-125f1bbe-0bab-462a-9ae2-d68961fbf861" d="
+        M 270 90
+        L 0 -10
+    "></path><text dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none" dy="20px" transform="
+            translate(135, 50)
+            rotate(180)
+            translate(-135, -50)
+          "><textPath xlink:href="#textpath-125f1bbe-0bab-462a-9ae2-d68961fbf861" startOffset="50%"></textPath></text><polyline points="270 100,0 0" stroke-width="1" stroke="black" fill="none" class="sc-aXZVg eMElBf"></polyline></g></svg><svg x="95" y="245" width="300" height="210" class="" fill="#ffffff"><g><path id="textpath-ffaa6317-326e-463c-a136-7ced774022e5" d="
+        M 300 200
+        L 0 -10
+    "></path><text dominant-baseline="middle" text-anchor="middle" font-weight="bold" pointer-events="none" dy="20px" transform="
+            translate(150, 105)
+            rotate(180)
+            translate(-150, -105)
+          "><textPath xlink:href="#textpath-ffaa6317-326e-463c-a136-7ced774022e5" startOffset="50%"></textPath></text><polyline points="300 210,0 0" stroke-width="1" stroke="black" fill="none" class="sc-aXZVg eMElBf"></polyline></g></svg></svg>
