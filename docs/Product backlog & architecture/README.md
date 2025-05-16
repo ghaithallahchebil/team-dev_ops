@@ -3,6 +3,7 @@
 Since Researchers, Founders and Product Managers all share the core need to discover, evaluate and act on emerging trends, we decided to consolidate them into a single "Innovator" persona based on their shared goal of identifying trends, understanding why they matter and rapidly turning those insights into research directions or product opportunities.
 
 ![image](https://hackmd.io/_uploads/H1nPN87Wxg.png)
+*Source: [weagree.com](https://weagree.com/weblog/adopting-innovations-product-lifecycle/)*
 
 ## First Product Backlog
 
