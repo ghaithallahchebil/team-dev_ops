@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # Frontend service
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - niche-explorer-network
+    restart: unless-stopped
+   
+
+  # Backend services
+  growth-calculation:
+    build:
+      context: ./server
+      dockerfile: src/growth-calculation/Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - niche-explorer-network
+    restart: unless-stopped
+
+  content-ingestion:
+    build:
+      context: ./server
+      dockerfile: src/content-ingestion/Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - niche-explorer-network
+    restart: unless-stopped
+
+  trend-dashboard:
+    build:
+      context: ./server
+      dockerfile: src/trend-dashboard/Dockerfile
+    ports:
+      - "8083:8083"
+    networks:
+      - niche-explorer-network
+
+  monitoring:
+    build:
+      context: ./server
+      dockerfile: src/monitoring/Dockerfile
+    ports:
+      - "8084:8084"
+    networks:
+      - niche-explorer-network
+    restart: unless-stopped
+
+#  # AI/ML service
+#  genai:
+#    build:
+#      context: ./genai
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8000:8000"
+#    networks:
+#      - niche-explorer-network
+#    restart: unless-stopped
+
+networks:
+  niche-explorer-network:
+    driver: bridge 

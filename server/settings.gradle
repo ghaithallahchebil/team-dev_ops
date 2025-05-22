@@ -1,7 +1,21 @@
-rootProject.name = "server"
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        maven { url 'https://repo.spring.io/plugins-release' }
+    }
+}
 
-include "content-ingestion"
-include "growth-calculation"
-include "trend-dashboard"
-include "monitoring"
-include "common"
+rootProject.name = 'niche-explorer'
+
+include 'common'
+include 'content-ingestion'
+include 'growth-calculation'
+include 'monitoring'
+include 'trend-dashboard'
+
+project(':common').projectDir = file('src/common')
+project(':content-ingestion').projectDir = file('src/content-ingestion')
+project(':growth-calculation').projectDir = file('src/growth-calculation')
+project(':trend-dashboard').projectDir = file('src/trend-dashboard')
+project(':monitoring').projectDir = file('src/monitoring')
