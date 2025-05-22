@@ -12,6 +12,30 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+      keyframes: {
+        progressBar: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' }
+        },
+        fadeIn: {
+          'from': { opacity: '0', transform: 'translateY(10px)' },
+          'to': { opacity: '1', transform: 'translateY(0)' }
+        },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20%)' }
+        },
+        pulse: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.7' }
+        }
+      },
+      animation: {
+        progressBar: 'progressBar 1.5s ease-out forwards',
+        fadeIn: 'fadeIn 0.5s ease-out forwards',
+        bounce: 'bounce 1s infinite',
+        pulse: 'pulse 2s infinite'
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
