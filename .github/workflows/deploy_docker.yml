@@ -25,21 +25,21 @@ jobs:
       - name: SSH to VM and Create .env.prod
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ vars.EC2_PUBLIC_IP }}
-          username: ${{ vars.AWS_EC2_USER }}
+          host: ${{ secrets.EC2_PUBLIC_IP }}
+          username: ${{ secrets.AWS_EC2_USER }}
           key: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
           script: |
             rm .env.prod
             touch .env.prod
-            echo "CLIENT_HOST=client.${{ vars.EC2_PUBLIC_IP }}.nip.io" >> .env.prod
-            echo "SERVER_HOST=api.${{ vars.EC2_PUBLIC_IP }}.nip.io" >> .env.prod
-            echo "PUBLIC_API_URL=https://api.${{ vars.EC2_PUBLIC_IP }}.nip.io/api" >> .env.prod
+            echo "CLIENT_HOST=client.${{ secrets.EC2_PUBLIC_IP }}.nip.io" >> .env.prod
+            echo "SERVER_HOST=api.${{ secrets.EC2_PUBLIC_IP }}.nip.io" >> .env.prod
+            echo "PUBLIC_API_URL=https://api.${{ secrets.EC2_PUBLIC_IP }}.nip.io/api" >> .env.prod
 
       - name: SSH to VM and Execute Docker-Compose Up
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ vars.EC2_PUBLIC_IP }}
-          username: ${{ vars.AWS_EC2_USER }}
+          host: ${{ secrets.EC2_PUBLIC_IP }}
+          username: ${{ secrets.AWS_EC2_USER }}
           key: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
           script: |
             echo "Logging into Docker registry..."
