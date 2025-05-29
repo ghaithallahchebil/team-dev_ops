@@ -1,34 +1,50 @@
-name: Deploy with Ansible
+name: Deploy EC2 and Configure with Ansible
 
 on:
   workflow_dispatch:
-    inputs:
-      server_ip:
-        description: 'Server IP to configure'
-        required: true
-        type: string
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
     steps:
-      - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
 
-      - name: Configure SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.AWS_EC2_PRIVATE_KEY }}" > ~/.ssh/deployer-key
-          chmod 600 ~/.ssh/deployer-key
-          ssh-keyscan -H ${{ github.event.inputs.server_ip }} >> ~/.ssh/known_hosts
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
 
-      - name: Install Ansible
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ansible
+    - name: Terraform Init and Apply
+      run: |
+        cd terraform
+        terraform init
+        terraform apply -auto-approve > tf.log
+        IP=$(terraform output -raw public_ip)
+        echo "EC2_IP=$IP" >> $GITHUB_ENV
 
-      - name: Run Ansible Playbook
-        run: |
-          ansible-playbook ansible/playbook.yml
-        env:
-          SERVER_IP: ${{ github.event.inputs.server_ip }}
-          SSH_PRIVATE_KEY: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
+    - name: Install Ansible
+      run: |
+        sudo apt update
+        sudo apt install -y ansible
+
+    - name: Setup SSH Key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.EC2_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+    - name: Wait for EC2 SSH
+      run: |
+        for i in {1..20}; do
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ec2-user@$EC2_IP "echo connected" && break
+          sleep 10
+        done
+
+    - name: Run Ansible
+      run: |
+        ansible-playbook ansible/playbook.yml -i "$EC2_IP," -u ec2-user --private-key ~/.ssh/id_rsa
