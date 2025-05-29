@@ -27,27 +27,27 @@ jobs:
       working-directory: ./terraform
       run: terraform init
       env:
-        TF_VAR_ssh_public_key: ${{ secrets.SSH_PUBLIC_KEY }}
+        TF_VAR_ssh_public_key: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
         
     - name: Terraform Plan
       if: github.event.inputs.action == 'plan'
       working-directory: ./terraform
       run: terraform plan
       env:
-        TF_VAR_ssh_public_key: ${{ secrets.SSH_PUBLIC_KEY }}
+        TF_VAR_ssh_public_key: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
         
     - name: Terraform Apply
       if: github.event.inputs.action == 'apply'
       working-directory: ./terraform
       run: terraform apply -auto-approve
       env:
-        TF_VAR_ssh_public_key: ${{ secrets.SSH_PUBLIC_KEY }}
+        TF_VAR_ssh_public_key: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
 
     - name: Terraform Destroy
       if: github.event.inputs.action == 'destroy'
       run: terraform destroy -auto-approve
       env:
-        TF_VAR_ssh_public_key: ${{ secrets.SSH_PUBLIC_KEY }}
+        TF_VAR_ssh_public_key: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
 
     - name: Get EC2 IP
       if: github.event.inputs.action == 'apply'

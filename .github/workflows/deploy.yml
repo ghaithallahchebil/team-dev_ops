@@ -17,7 +17,7 @@ jobs:
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deployer-key
+          echo "${{ secrets.AWS_EC2_PRIVATE_KEY }}" > ~/.ssh/deployer-key
           chmod 600 ~/.ssh/deployer-key
           ssh-keyscan -H ${{ github.event.inputs.server_ip }} >> ~/.ssh/known_hosts
 
@@ -31,4 +31,4 @@ jobs:
           ansible-playbook ansible/playbook.yml
         env:
           SERVER_IP: ${{ github.event.inputs.server_ip }}
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
