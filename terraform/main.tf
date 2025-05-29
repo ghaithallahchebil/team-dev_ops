@@ -15,7 +15,7 @@ resource "aws_key_pair" "deployer" {
 
 resource "aws_instance" "app_server" {
   ami           = "ami-084568db4383264d4"  # Ubuntu 22.04 LTS AMI
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   key_name      = aws_key_pair.deployer.key_name
 
   tags = {
