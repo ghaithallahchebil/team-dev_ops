@@ -1,4 +1,4 @@
-name: Deploy EC2 and Configure with Ansible
+name: Deploy 2
 
 on:
   workflow_dispatch:
