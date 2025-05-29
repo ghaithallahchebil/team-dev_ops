@@ -21,14 +21,18 @@ jobs:
       uses: hashicorp/setup-terraform@v2
 
     - name: Terraform Init and Apply
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         cd terraform
         terraform init
         terraform apply -auto-approve \
-          -var="aws_access_key=${{ secrets.AWS_ACCESS_KEY_ID }}" \
-          -var="aws_secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" | tee tf.log
+          -var="aws_access_key=$AWS_ACCESS_KEY_ID" \
+          -var="aws_secret_key=$AWS_SECRET_ACCESS_KEY" | tee tf.log
         IP=$(terraform output -raw instance_ip)
         echo "EC2_IP=$IP" >> $GITHUB_ENV
+
 
     - name: Install Ansible
       run: |
