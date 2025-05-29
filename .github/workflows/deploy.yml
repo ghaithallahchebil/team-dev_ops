@@ -1,0 +1,34 @@
+name: Deploy with Ansible
+
+on:
+  workflow_dispatch:
+    inputs:
+      server_ip:
+        description: 'Server IP to configure'
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deployer-key
+          chmod 600 ~/.ssh/deployer-key
+          ssh-keyscan -H ${{ github.event.inputs.server_ip }} >> ~/.ssh/known_hosts
+
+      - name: Install Ansible
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+
+      - name: Run Ansible Playbook
+        run: |
+          ansible-playbook ansible/playbook.yml
+        env:
+          SERVER_IP: ${{ github.event.inputs.server_ip }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
